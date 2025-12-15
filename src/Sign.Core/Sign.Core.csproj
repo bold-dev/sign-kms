@@ -25,6 +25,8 @@
     <InternalsVisibleTo Include="sign" />
     <InternalsVisibleTo Include="Sign.Cli.Test" />
     <InternalsVisibleTo Include="Sign.Core.Test" />
+    <InternalsVisibleTo Include="Sign.SignatureProviders.AwsKms" />
+    <InternalsVisibleTo Include="Sign.SignatureProviders.AwsKms.Test" />
     <InternalsVisibleTo Include="Sign.SignatureProviders.CertificateStore" />
     <InternalsVisibleTo Include="Sign.SignatureProviders.CertificateStore.Test" />
     <InternalsVisibleTo Include="Sign.SignatureProviders.KeyVault" />

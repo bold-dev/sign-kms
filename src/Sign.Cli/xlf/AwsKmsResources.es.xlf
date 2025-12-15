@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="es" original="../AwsKmsResources.resx">
+    <body>
+      <trans-unit id="AccessKeyIdOptionDescription">
+        <source>AWS access key ID. If not provided, the default credential chain will be used.</source>
+        <target state="new">AWS access key ID. If not provided, the default credential chain will be used.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="CertificateFileNotFound">
+        <source>Certificate file not found: {0}</source>
+        <target state="new">Certificate file not found: {0}</target>
+        <note>{0} is the certificate file path.</note>
+      </trans-unit>
+      <trans-unit id="CertificatePathOptionDescription">
+        <source>Path to the certificate file (PEM or DER format) that corresponds to the KMS key.</source>
+        <target state="new">Path to the certificate file (PEM or DER format) that corresponds to the KMS key.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="CommandDescription">
+        <source>Sign files using a key stored in AWS Key Management Service (KMS).</source>
+        <target state="new">Sign files using a key stored in AWS Key Management Service (KMS).</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="InvalidCertificatePath">
+        <source>Invalid certificate path.</source>
+        <target state="new">Invalid certificate path.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="InvalidRegion">
+        <source>Invalid AWS region specified.</source>
+        <target state="new">Invalid AWS region specified.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="KeyIdOptionDescription">
+        <source>The AWS KMS key ID, key ARN, alias name, or alias ARN.</source>
+        <target state="new">The AWS KMS key ID, key ARN, alias name, or alias ARN.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="ProfileOptionDescription">
+        <source>AWS profile name from the credentials file. If not provided, the default credential chain will be used.</source>
+        <target state="new">AWS profile name from the credentials file. If not provided, the default credential chain will be used.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="RegionOptionDescription">
+        <source>The AWS region where the KMS key is located (e.g., us-east-1).</source>
+        <target state="new">The AWS region where the KMS key is located (e.g., us-east-1).</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SecretAccessKeyOptionDescription">
+        <source>AWS secret access key. Must be provided with --aws-access-key-id.</source>
+        <target state="new">AWS secret access key. Must be provided with --aws-access-key-id.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="SessionTokenOptionDescription">
+        <source>AWS session token for temporary credentials.</source>
+        <target state="new">AWS session token for temporary credentials.</target>
+        <note />
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

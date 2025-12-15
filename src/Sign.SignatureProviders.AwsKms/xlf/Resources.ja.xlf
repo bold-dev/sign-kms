@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="ja" original="../Resources.resx">
+    <body>
+      <trans-unit id="CertificateDetails">
+        <source>Certificate details:</source>
+        <target state="new">Certificate details:</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="CertificateDoesNotContainRsaPublicKey">
+        <source>The certificate does not contain an RSA public key.</source>
+        <target state="new">The certificate does not contain an RSA public key.</target>
+        <note />
+      </trans-unit>
+      <trans-unit id="CertificateFileNotFound">
+        <source>Certificate file not found: {0}</source>
+        <target state="new">Certificate file not found: {0}</target>
+        <note>{0} is the certificate file path.</note>
+      </trans-unit>
+      <trans-unit id="LoadedCertificate">
+        <source>Loaded certificate from file. [{milliseconds} ms]</source>
+        <target state="new">Loaded certificate from file. [{milliseconds} ms]</target>
+        <note>{Placeholder="{milliseconds}"} is a decimal number representing the number of milliseconds elapsed, and "ms" is the unit abbreviation for milliseconds.</note>
+      </trans-unit>
+      <trans-unit id="LoadingCertificate">
+        <source>Loading certificate from file.</source>
+        <target state="new">Loading certificate from file.</target>
+        <note />
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

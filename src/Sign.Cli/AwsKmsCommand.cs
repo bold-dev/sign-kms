@@ -7,6 +7,7 @@ using System.CommandLine.Parsing;
 using Amazon;
 using Amazon.KeyManagementService;
 using Amazon.Runtime;
+using Amazon.Runtime.CredentialManagement;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Sign.Core;
@@ -155,7 +156,13 @@ namespace Sign.Cli
             // If a profile is specified, use it
             if (!string.IsNullOrEmpty(profile))
             {
-                return new StoredProfileAWSCredentials(profile);
+                CredentialProfileStoreChain chain = new();
+                if (chain.TryGetAWSCredentials(profile, out AWSCredentials? profileCredentials))
+                {
+                    return profileCredentials;
+                }
+
+                throw new InvalidOperationException($"AWS profile '{profile}' not found.");
             }
 
             // Otherwise, use the default credential chain (env vars, instance profile, etc.)
