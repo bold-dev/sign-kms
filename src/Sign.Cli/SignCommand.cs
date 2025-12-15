@@ -23,6 +23,12 @@ namespace Sign.Cli
 
             codeCommand.Subcommands.Add(azureKeyVaultCommand);
 
+            AwsKmsCommand awsKmsCommand = new(
+                codeCommand,
+                serviceProviderFactory);
+
+            codeCommand.Subcommands.Add(awsKmsCommand);
+
             CertificateStoreCommand certificateStoreCommand = new(
                 codeCommand,
                 serviceProviderFactory);

@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sign.Core\Sign.Core.csproj" />
+    <ProjectReference Include="..\Sign.SignatureProviders.AwsKms\Sign.SignatureProviders.AwsKms.csproj" />
     <ProjectReference Include="..\Sign.SignatureProviders.CertificateStore\Sign.SignatureProviders.CertificateStore.csproj" />
     <ProjectReference Include="..\Sign.SignatureProviders.KeyVault\Sign.SignatureProviders.KeyVault.csproj" />
     <ProjectReference Include="..\Sign.SignatureProviders.TrustedSigning\Sign.SignatureProviders.TrustedSigning.csproj" />
@@ -58,6 +59,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AwsKmsResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AwsKmsResources.resx</DependentUpon>
+    </Compile>
     <Compile Update="AzureKeyVaultResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -81,6 +87,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="AwsKmsResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AwsKmsResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="AzureKeyVaultResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AzureKeyVaultResources.Designer.cs</LastGenOutput>
