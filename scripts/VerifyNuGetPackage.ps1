@@ -61,6 +61,7 @@ If ($packageFilePaths.Count -ne 1)
 [System.IO.File]::Copy($sourcePackageFilePath, $destinationFile.FullName, $overwrite)
 
 [string[]] $expectedEntryFullNames =
+    'tools/net8.0/any/sign.dll',
     'tools/net8.0/any/tools/SDK/x64/appxpackaging.dll',
     'tools/net8.0/any/tools/SDK/x64/appxsip.dll',
     'tools/net8.0/any/tools/SDK/x64/makeappx.exe',

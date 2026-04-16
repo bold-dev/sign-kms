@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="$(RepositoryRootDirectory)\SdkTools.props" />
 
   <PropertyGroup>
@@ -13,6 +13,9 @@
     <RootNamespace>Sign.Cli</RootNamespace>
     <SelfContained>false</SelfContained>
     <ToolCommandName>sign</ToolCommandName>
+    <!-- Clear RID inherited from Directory.Build.props so dotnet pack produces
+         tools/net8.0/any/ layout for cross-platform tool restore (issue #984). -->
+    <RuntimeIdentifier />
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +27,7 @@
     <ProjectReference Include="..\Sign.SignatureProviders.AwsKms\Sign.SignatureProviders.AwsKms.csproj" />
     <ProjectReference Include="..\Sign.SignatureProviders.CertificateStore\Sign.SignatureProviders.CertificateStore.csproj" />
     <ProjectReference Include="..\Sign.SignatureProviders.KeyVault\Sign.SignatureProviders.KeyVault.csproj" />
-    <ProjectReference Include="..\Sign.SignatureProviders.TrustedSigning\Sign.SignatureProviders.TrustedSigning.csproj" />
+    <ProjectReference Include="..\Sign.SignatureProviders.ArtifactSigning\Sign.SignatureProviders.ArtifactSigning.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,6 +67,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AwsKmsResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="TrustedSigningResources.Designer.cs">
+      <DependentUpon>TrustedSigningResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="AzureKeyVaultResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -79,10 +87,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="TrustedSigningResources.Designer.cs">
+    <Compile Update="ArtifactSigningResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>TrustedSigningResources.resx</DependentUpon>
+      <DependentUpon>ArtifactSigningResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -90,6 +98,10 @@
     <EmbeddedResource Update="AwsKmsResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AwsKmsResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TrustedSigningResources.resx">
+      <LastGenOutput>TrustedSigningResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="AzureKeyVaultResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,9 +115,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="TrustedSigningResources.resx">
+    <EmbeddedResource Update="ArtifactSigningResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TrustedSigningResources.Designer.cs</LastGenOutput>
+      <LastGenOutput>ArtifactSigningResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -13,8 +13,8 @@
         <note />
       </trans-unit>
       <trans-unit id="CommandDescription">
-        <source>Use Trusted Signing.</source>
-        <target state="translated">Usar assinatura confiável.</target>
+        <source>Use Trusted Signing. (obsolete, use artifact-signing instead)</source>
+        <target state="translated">Use a Assinatura Confiável. (obsoleto, use a assinatura de artefatos)</target>
         <note />
       </trans-unit>
       <trans-unit id="EndpointOptionDescription">

@@ -40,6 +40,12 @@ namespace Sign.Cli
                 serviceProviderFactory);
 
             codeCommand.Subcommands.Add(trustedSigningCommand);
+
+            ArtifactSigningCommand artifactSigningCommand = new(
+                codeCommand,
+                serviceProviderFactory);
+
+            codeCommand.Subcommands.Add(artifactSigningCommand);
         }
     }
 }
